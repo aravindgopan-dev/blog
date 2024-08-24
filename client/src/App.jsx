@@ -7,6 +7,7 @@ import Signup from './pages/Signup'
 import Dashbord from './pages/Dashbord'
 import Projects from './pages/Projects'
 import Header from "./componets/Header"
+import Footer from './componets/Footer'
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
 
 
       </Routes>
+      <Footer></Footer>
     
     
     </BrowserRouter>
