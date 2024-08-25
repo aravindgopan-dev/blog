@@ -20,6 +20,8 @@ function Sigup() {
       setError("please fill out all fields")
       return;
     }
+
+    
     try {
       setloading(true)
       const res = await fetch("/api/auth/signup", {

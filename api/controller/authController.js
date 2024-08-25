@@ -90,11 +90,12 @@ const signin = async (req, res, next) => {
                 return
             }
             else {
+                
 
                 const token = jwt.sign({ _id: User._id }, process.env.key, { expiresIn: "2d" });
                 res.status(200).cookie("jwt", token, {
                     httpOnly: true,
-                    sameSite: 'strict', // Helps prevent CSRF attacks
+                    sameSite: 'strict',
                     maxAge: 2 * 24 * 60 * 60 * 1000
 
                 }).json(find);
